@@ -1,14 +1,157 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-	<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="styles/style.css">
+	<link rel="icon" href="./images/icon.png">
 	<link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
 	<title>David's Lemonade</title>
 </head>
 
 <body>
-	<p><span>DAVID'S</span> Lemonade</p>
+	<header>
+		<!-- Navigation -->
+		<nav>
+			<a href="http://www.combava.com">
+				<img src="./images/logovertical.png" alt="Logo" id="navLogo">
+			</a>
+			<a href="http://www.combava.com" class="navbutton">Contact</a>
+			<a href="#qsn" class="navbutton">Qui sommes-nous ?</a>
+			<a href="#production" class="navbutton">Production</a>
+			<a href="#petitehistoire" class="navbutton">Petite histoire</a>
+			<a href="#lesaviezvous" class="navbutton">Le saviez-vous ?</a>
+			
+			<!-- Navigation Smarphone -->
+			<input type="checkbox" id="navbar-toggle-cbox"/>
+			<label for="navbar-toggle-cbox" data-toggle="sidenav">
+				<img src="./images/burger.png" alt="menu" id="menu">
+			</label>
+			<div class="sidenav">
+				<a href="#lesaviezvous">Le saviez-vous ?</a>
+				<a href="#petitehistoire">Petite histoire</a>
+				<a href="#production">Production</a>
+				<a href="#qsn">Qui sommes-nous ?</a>
+				<a href="http://www.combava.com">Contact</a>
+			</div>
+		</nav>
+	</header>
+
+	<main>
+		<div id="content">
+			<!-- Acceuil -->
+			<div id="landing">
+				<img src="./images/logo.png" alt="Logo" id="logo">
+				<p>Les limonades à l'ancienne proches de chez vous</p>
+				<div class="center">
+					<a href="#formulaire" id="bouton">Participez ici</a>
+				</div>
+				<a href="#lesaviezvous">
+					<img src="./images/fleches.png" alt="fleches" id="fleches">
+				</a>
+			</div>
+
+			<!-- Le saviez-vous ? -->
+			<div id="lesaviezvous">
+				<h2 class="center">Le saviez-vous ?</h2>
+				<img src="./images/le_saviez_vous.PNG" alt="le_saviez_vous">
+				<p>Le citron est l'un des fruits le plus riche en vitamine C.
+				Grâce ses apports nutritionnels, il favorise l'hydratation, le traitement du rhume, 
+				du mal de gorge et même pour la perte de poids.<br>
+				Le citron peut être consommer au quotidien comme un jus ou un accompagnement parfait pour les plats.</p>
+			</div>
+			<!-- Petite histoire -->
+			<div id="petitehistoire">
+				<h2 class="center">Petite histoire</h2>
+				<img src="./images/petite_histoire.png" alt="petite_histoire">
+				<p>Dans les années 50 aux Etats-Unis, les enfants montaient des stands de citronnade maison devant chez eux, afin de récolter un peu d'argent de poche. 
+				Une entreprise de l'époque, "David's Lemonade", a repris l'idée et répandu le principe de ces stands de citronnade à 5 cents dans tout le pays, avec un énorme succès.
+				70 ans après, elle a aujourd'hui disparu. 
+				<br>Nous voulons ainsi conserver cette culture de produits faits maison.</p>
+			</div>
+			<!-- Production -->
+			<div id="production">
+				<h2 class="center">Procédé de production</h2>
+				<img src="./images/production.jpg" alt="notre_production">
+				<p>Nous adaptons une fabrication artisanale et les citrons, que nous choisissons avec soin, sont exclusivement issus de l'agriculture biologique.	
+				Nos citronnades sont pressées à base de pure citron, afin de garder sa fraîcheur, ses nutriments, son goût unique et 100% naturel.	
+				</p>
+			</div>
+			<!-- Qui sommes-nous ?-->
+			<div id="qsn">
+				<h2 class="center">Qui sommes-nous ?</h2>
+				<div id="iframe-container">
+					<iframe src="https://www.google.com/maps/d/u/0/embed?mid=1fFVSVZHnI8AMsRp5qzru-MQwx8ooHsi0"></iframe>
+				</div>
+				<p>L'association Combava regroupe des producteurs indépendants d'agrumes du sud de la France.
+					Nous organisons des dégustations de jus privées et nos événements sont actuellement présents sur 15 villes de France.
+					Notre objectif est de mettre en avant votre santé et le savoir-être des agriculteurs français.
+					<br>Lors des dégustations, nos agriculteurs seront présents pour vous donner des informations et répondre à toutes vos questions sur leurs produits.
+				</p>
+			</div>
+			<div id="labels" class="center">
+				<img src="./images/label.png" alt="label">
+			</div>
+
+			<!-- Formulaire -->
+			<div id="formulaire" class="center"> 
+				<form>
+					<label for="evenement">Évenements <span>*</span></label>
+					<select name="Évenements" title="Evenements" id="evenement" required>
+						<option value="">Choississez le lieu de dégustation</option>
+						<option value="op1">AMAP les Grand’Goules</option>
+						<option value="op2">AMAP Bio des 2 rives</option>
+						<option value="op3">Amap des Voiliers</option>
+						<option value="op4">Le Pompin'Ambour</option>
+						<option value="op5">AMAP BIO’RILLAC</option>
+						<option value="op6">AMAP</option>
+						<option value="op7">Pensees Bio</option>
+						<option value="op8">Bio & Sens Montpellier - Juvignac</option>
+						<option value="op9">Biossetan</option>
+						<option value="op10">La Canopée </option>
+						<option value="op11">Naturéo </option>
+						<option value="op12">Rayons Verts</option>
+						<option value="op13">BIOMONDE</option>
+						<option value="op14">Bio c' Bon</option>
+						<option value="op15">Les Comptoirs de la Bio</option>
+					</select>
+	
+					<div id="information">
+						<label for="nom">Nom<span>*</span></label>
+						<input type="text" id="nom" name="nom" placeholder="Votre nom" pattern="[A-zÀ-ú]*" title="Écrivez votre nom" required>
+			
+						<label for="prénom">Prénom<span>*</span></label>	
+						<input type="text" id="prénom" name="prénom" placeholder="Votre prénom" pattern="[A-zÀ-ú]*" required>
+		
+						<label for="email">Email<span>*</span></label>
+						<input type="text" id="email" name="email" placeholder="Votre email" pattern="[^@\s]+@[^@\s]+\.[^@\s]+" required>
+							
+						<label for="tel">Téléphone<span>*</span></label>
+						<input type="text" id="tel" name="tel" placeholder="Votre numéro de téléphone" pattern="^(?:(?:\+|00)33|0)\s*[1-9](?:[\s.-]*\d{2}){4}$" required>
+					</div>
+					<div class="inlinecase">
+						<input type="checkbox" name="check_cg" id="cg" value="cg" required>
+						<label for="cg">J'accepte<span id="condition">les conditions générales</span><span>*</span></label>
+					</div>
+					<div class="inlinecase">
+						<input type="checkbox" name="check_notif" id="newsletter" value="newsletter">
+						<label for="newsletter" id="labelnewsletter">J'accepte recevoir<br>des informations pertinentes<br>pour les événements à venir</label>
+					</div>
+					<div class="center"> 
+						<input type="submit" value="Valider">
+					</div>
+				</form>
+			</div>	
+		</div>
+	</main>
+	
+	<footer>
+		<p>Combava</p>
+		<div id="reseau" class="center">
+			<img src="./images/facebook.png" alt="logo facebook">
+			<img src="./images/instagram.png" alt="logo instagram">
+			<img src="./images/twitter.png" alt="logo twitter">
+		</div>
+		<p>Copyright © 2020. Tous droits réservés.</p>
+	</footer>
 </body>
 </html>

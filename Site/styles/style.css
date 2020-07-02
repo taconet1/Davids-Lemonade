@@ -1,26 +1,482 @@
+/**************************************************************
+*															  *
+*			CSS (Mobile First) de David's Lemonade			  *
+*															  *
+***************************************************************/
+
 /* General */
+
+html, body, div, h1, h2, h3, h4, h5, h6, p, blockquote, a, img, ol, ul, li, table, tbody, tfoot, thead, tr, th, td, article, aside, footer, header, nav {
+	margin: 0%;
+	padding: 0%;
+	border: 0;
+	font-size: 100%;
+	line-height: 1;
+	font: inherit;
+	vertical-align: baseline;
+	scroll-behavior: smooth;
+}
+
 @font-face {
 	src: url(lemonade_font.ttf);
 	font-family: nosifer;
 }
-*{
 
-}
-
-body{
+body {
 	font-family: 'Indie Flower', curvive, sans-serif;
 	background-image: url('../images/background.jpg');
-	font-size: 200px;
 }
-span{
+
+#content {
+	padding: 15px 25px
+}
+
+p {
 	font-weight: bold;
+	font-family: nosifer;
 }
-p{
-	font-weight:50;
-	font-family : nosifer;
+
+.center {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
-/* Header */
 
+/* Navigation */
 
+nav {
+	background-color: rgba(238, 234, 176, 0.548);
+	position: fixed;
+	width: 100%;
+	z-index: 10;
+}
+
+#navLogo {
+	padding: 15px 0px 5px 25px;
+	width: 25%;
+}
+
+.navbutton {
+	display: none;
+}
+
+#navbar-toggle-cbox {
+	display: none;
+}
+
+#navbar-toggle-cbox + label img {
+	float: right;
+    height: 50px;
+	width: 50px;
+}
+
+.sidenav {
+	display: none;
+}
+
+#navbar-toggle-cbox:checked ~ .sidenav {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+}
+
+.sidenav a {
+	padding: 8px 12px 8px 16px;
+	text-decoration: none;
+	font-size: 22px;
+	color: black;
+	transition: 0.3s;
+}
+
+.sidenav a:hover {
+	color: orange;
+}
+
+/* Landing */
+
+#logo {
+	position: relative;
+	display: block;
+	margin: auto;
+	margin-top: 16%;
+	width: 60%;
+}
+
+#bouton {
+	color: black;
+	text-decoration: none;
+	text-align: center;
+	border: 3px solid orange;
+	border-radius: 8px;
+	background-color: rgba(238, 234, 176, 0.548);
+	opacity: 0.8;
+	padding: 3%;
+	box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0 ,0 ,0, 0.19);
+	transition: 0.3s;
+	font-size: 140%;
+	font-weight: bold;
+	width: auto;
+}
+
+#bouton:hover {
+	opacity: 1;
+}
+
+#landing p {
+	margin: 5%;
+	font-size: 25px;
+	text-align: center;
+	padding: 2%;
+}
+
+#fleches {
+	display: block;
+	margin: 8% auto 0 auto;
+	width: 10%;
+	animation-name: fleches-transparent;
+	animation-duration: 2.75s;
+	animation-iteration-count: infinite;
+}
+
+@keyframes fleches-transparent {
+	0% {
+		opacity: 0;
+	}
+	50% {
+		opacity: 0.75;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
+/* Partie lesaviezvous + petitehistoire + production + qsn */
+
+#lesaviezvous h2, #petitehistoire h2, #production h2, #qsn h2 {
+	margin: 15% auto 15px 0px;
+	font-size: 8vw;
+}
+
+#lesaviezvous img, #petitehistoire img, #production img {
+	display: block;
+	width: 75%;
+	border-radius: 8px;
+	margin: 0px auto 4%;
+	box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0 ,0 ,0, 0.19);
+}
+
+#lesaviezvous p, #petitehistoire p, #production p, #qsn p {
+	width: 90%;
+	margin: auto;
+	font-size: 5vw;
+	text-align: justify;
+	text-justify: inter-word;
+}
+
+#lesaviezvous h2 {
+	margin-top: 25%;
+}
+
+#qsn p {
+	margin-top: 4%;
+}
+
+#iframe-container {
+	overflow: hidden;
+	padding-top: 56.25%;
+	position: relative;
+}
+
+#iframe-container iframe {
+	border: 0;
+	border-radius: 8px;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	position: absolute;
+}
+
+/* Labels */
+
+#labels img{
+	width: 50%;
+	margin-top: 10%;
+	margin-bottom: 10%;
+}
+
+/* Formulaire */
+
+form {
+	margin: auto;
+	border: 0;
+	font-size: 100%;
+}
+
+span {
+	color: rgb(155, 45, 45);
+	margin: 1%;
+}
+
+#condition {
+	color: #777;
+	text-decoration: underline;
+}
+
+form label {
+	display: block;
+	font-weight: bold;
+	color: #777;
+}
+
+input[type="text"], select {
+	color: #777;
+	padding: 10px;
+	margin: 5px 0 15px 0;
+	border: 2px solid #ddd;
+	border-radius: 5px;
+}
+
+input[type="checkbox"] {
+	display: inline-block;
+}
+
+input[type="submit"] {
+	color: black;
+	text-decoration: none;
+	text-align: center;
+	border: 3px solid orange;
+	border-radius: 8px;
+	background-color: rgba(238, 234, 176, 0.548);
+	opacity: 0.8;
+	padding: 3%;
+	margin-top: 4%;
+	box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0 ,0 ,0, 0.19);
+	transition: 0.3s;
+	font-size: 150%;
+	width: auto;
+}
+
+.inlinecase {
+	display: flex;
+	flex-direction: row;
+	align-items: baseline;
+	margin: 2%;
+}
+
+input[type="submit"]:hover {
+	opacity: 1;
+}
+
+#information input {
+	width: 84%;
+}
 
 /* Footer */
+
+footer {
+	background-color: rgba(238, 234, 176, 0.85);
+	width: 100%;
+}
+
+#reseau img {
+	width: 8%;
+	margin: 2%;
+}
+
+footer p {
+	padding-top: 10px;
+	text-align: center;
+	font-weight: bold;
+}
+
+@media screen and (min-width: 768px) {
+	
+	/* Navigation */
+
+	#navLogo {
+		width: 8%;
+		padding: 15px 25px 5px;
+	}
+
+	.navbutton {
+		display: block;
+		float: right;
+		text-align: center;
+		font-size: 20px;
+		padding: 20px 1%;
+		text-decoration: none;
+		color: black;
+		border-bottom: 3px solid transparent;
+	}
+	
+	.navbutton:hover {
+		animation: nav-transparent-border 1.5s;
+	}
+
+	#navbar-toggle-cbox + label {
+		display: none;
+	}
+	
+	@keyframes nav-transparent-border {
+		0% {
+			border-bottom: 3px solid rgba(190, 148, 12, 0);
+		}
+		100% {
+			border-bottom: 3px solid rgb(190, 149, 12);
+		}
+	}
+
+	/* Landing */
+
+	#logo {
+		width: 24%;
+		margin-top: 6%;
+	}
+
+	#bouton {
+		font-size: 235%;
+		padding: 1%;
+	}
+	
+	#landing p {
+		font-size: 240%;
+		margin: 0%;
+		padding: 1%;
+	}
+
+	#fleches {
+		margin-top: 2%;
+		width: 4%;
+	}
+	
+	/* Le saviez-vous + production */
+
+	#lesaviezvous, #petitehistoire, #production, #qsn {
+		margin-bottom: 10%;
+	}
+
+	#lesaviezvous {
+		display: grid;
+		grid-template-columns: 50% 50%;
+		grid-template-rows: 10% 25%;
+		margin-top: 15%;
+	}
+	
+	#lesaviezvous h2, #production h2 {
+		margin: 10% 12% 15px 0px;
+		grid-row: 1;
+		grid-column: 2;
+		font-size: 45px;
+	}
+	
+	#lesaviezvous p, #production p {
+		margin: 0;
+		margin-left: 87%;
+		grid-row: 3;
+		grid-column: 1;
+		width: 100%;
+		font-size: 20px;
+		text-align: justify;
+		text-justify: inter-word;
+	}
+	
+	#lesaviezvous img, #production img {
+		border-radius: 8px;
+		margin: 70px 12% 4% 12%;
+		box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0 ,0 ,0, 0.19);
+		width: 60%;
+		grid-row: 1/6;
+		grid-column: 1;
+	}
+	
+	/* Petite histoire + qsn */
+	
+	#petitehistoire, #production, #qsn {
+		display: grid;
+		grid-template-columns: 50% 50%;
+		grid-template-rows: 10% 25%;
+	}
+	
+	#petitehistoire h2, #qsn h2 {
+		margin: 10% 0px 15px 18%;
+		grid-row: 1;
+		grid-column: 1;
+		font-size: 45px;
+	}
+	
+	#petitehistoire img {
+		border-radius: 8px;
+		margin-right: 12%;
+		margin-top: 100px;
+		box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0 ,0 ,0, 0.19);
+		width: 60%;
+		grid-row: 1/6;
+		grid-column: 2;
+	}
+		
+	#petitehistoire p, #qsn p {
+		margin: 0;
+		grid-row: 3;
+		grid-column: 1;
+		width: 100%;
+		font-size: 20px;
+		margin-left: 12%;
+		text-align: justify;
+		text-justify: inter-word;
+	}
+	
+	#iframe-container {
+		border-radius: 8px;
+		margin-top: 100px;
+		margin-left: 27%;
+		box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0 ,0 ,0, 0.19);
+		width: 60%;
+		height: 3%;
+		grid-row: 1/6;
+		grid-column: 2;
+	}
+	
+	#qsn h2 {
+		margin-top: 10%;
+	}
+
+	#qsn {
+		margin-bottom: 0%;
+	}
+	
+	/* Labels */
+
+	#labels img {
+		width: 30%;
+		margin-top: 10%;
+		margin-bottom: 5%;
+	}
+
+	/* Formulaire */
+	
+	#information input {
+		width: 100%;
+	}
+	
+	.center form {
+		font-size: 150%;
+	}
+	
+	select {
+		width: 107%;
+	}
+	
+	#formTextInline {
+		font-size: 80%;;
+	}
+
+	/* Footer */
+
+	#reseau img {
+		width: 3%;
+		margin: 10px 10px 0 10px;
+	}
+}
