@@ -1,11 +1,10 @@
 # David's Lemonade :lemon:
 
-Site réalisé lors du projet module IHM (interface homme-machine) par :  
-Anthony Audoin  
-Léo Mercier  
-Marie-Madeleine Taconet
+*Dans le cadre du module M2105 (Interface Homme-Machine), nous avons réalisé un landing page pour une association fictive appelé Combava, dans lequel le site doit leur permettre à promouvoir leurs prochains événements de dégustation de citronnade.*
 
-Click on the link below to watch our project website : 
-https://taconet1.github.io/Davids-Lemonade/Site/index.html
+
+Réalisé par : Anthony AUDOIN, Léo MERCIER, Marie TACONET  
+Enseignant encadrant : Marion GISSLER  
+Sujet/Enoncé : https://www.cloudschool.org/iut-info  
 
 ![View](Site/images/View.PNG)
